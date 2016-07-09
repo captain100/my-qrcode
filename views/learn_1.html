@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>二维码生成器</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    
+    <input type="text" name="url">
+    <button id="mk-qrcode" >生成二维码</button>
+    <div id="qrcode-content"></div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/qrcode.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#mk-qrcode').on('click', function(){
+                var url = $('input[name=url]').val()
+                console.log(url)
+                var qrcodeContent = $('#qrcode-content')
+                var qrcode = new QRCode(qrcodeContent[0], {width: 200, height: 200})
+                qrcode.makeCode(url)
+                console.log(qrcode)
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    max-width: 420px;
+    margin: auto;
+    background: #efefef;
+}
+
+body input {
+    width:  80%;
+    margin: 30px 10%;
+    height: 30px;
+}
+
+body button {
+    width: 80%;
+    margin: 0px 10%;
+    height: 30px;
+    background: #07CEF7;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+}
+
+#qrcode-content img {
+    margin: 40px auto;
+}
